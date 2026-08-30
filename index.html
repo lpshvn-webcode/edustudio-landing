@@ -1231,5 +1231,26 @@
   })();
 </script>
 
+<script>
+  (() => {
+    if (window.parent === window) return;
+    let lastHeight = 0;
+    const sendEmbedHeight = () => {
+      requestAnimationFrame(() => {
+        const height = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+        if (Math.abs(height - lastHeight) < 2) return;
+        lastHeight = height;
+        window.parent.postMessage({ source: 'edustudio-landing', height }, '*');
+      });
+    };
+    window.addEventListener('load', sendEmbedHeight);
+    window.addEventListener('resize', sendEmbedHeight);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sendEmbedHeight);
+    if ('ResizeObserver' in window) new ResizeObserver(sendEmbedHeight).observe(document.body);
+    setTimeout(sendEmbedHeight, 500);
+    setTimeout(sendEmbedHeight, 1600);
+  })();
+</script>
+
 </body>
 </html>
