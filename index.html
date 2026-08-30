@@ -627,9 +627,12 @@
   .visual-ticket i{font-style:normal;color:var(--coral);}
 
   .story-marquee{overflow:hidden;background:var(--ink);color:#fff;padding:16px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);}
-  .story-marquee-track{display:flex;align-items:center;gap:28px;width:max-content;white-space:nowrap;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;animation:marquee 28s linear infinite;}
+  .story-marquee-track{display:flex;align-items:center;width:max-content;white-space:nowrap;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;animation:marquee 34s linear infinite;will-change:transform;}
+  .story-marquee-group{display:flex;align-items:center;gap:28px;flex:none;padding-left:28px;}
+  .story-marquee-group::after{content:"✦";color:var(--coral);font-style:normal;}
   .story-marquee-track i{color:var(--coral);font-style:normal;}
-  @keyframes marquee{to{transform:translateX(-50%)}}
+  .story-marquee:hover .story-marquee-track{animation-play-state:paused;}
+  @keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 
   .section-head h2{font-size:clamp(52px,5.8vw,82px);line-height:.98;}
   .reasons{grid-template-columns:1.25fr .75fr .75fr;grid-template-areas:"a b c" "a d d";gap:16px;}
@@ -746,7 +749,8 @@
 </style>
 <style>
   /* Refined program grid and seamless consultation CTA */
-  .question-cta{padding:28px 0 96px;background:var(--paper);}
+  .bg-paper{background:var(--paper);}
+  .question-cta{margin-top:-1px;padding:28px 0 96px;background:var(--paper);}
   .question-cta-card{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:42px;padding:38px 44px;border:1px solid rgba(16,26,53,.08);border-radius:30px;background:#fff;box-shadow:0 22px 54px rgba(16,26,53,.09);}
   .question-cta-card::before{content:"?";position:absolute;right:290px;top:50%;transform:translateY(-50%) rotate(8deg);font:400 160px/1 'DM Serif Display',serif;color:rgba(255,79,45,.065);pointer-events:none;}
   .question-cta-copy{position:relative;z-index:1;max-width:690px;text-align:left;}
@@ -756,9 +760,9 @@
   .question-cta-card .btn{position:relative;z-index:1;flex:none;}
 
   .program-intro{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(16,26,53,.1);}
-  .itinerary{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:minmax(230px,auto);gap:16px;overflow:visible;padding:0;scroll-snap-type:none;}
+  .itinerary{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:minmax(252px,auto);gap:16px;overflow:visible;padding:0;scroll-snap-type:none;}
   .leg{min-width:0;min-height:0;display:flex;grid-column:span 4;flex-direction:column;align-items:flex-start;gap:15px;padding:26px;border-radius:26px;scroll-snap-align:none;}
-  .leg:nth-child(1){grid-row:span 2;background:var(--coral);color:#fff;min-height:476px;}
+  .leg:nth-child(1){grid-row:span 2;background:var(--coral);color:#fff;min-height:520px;}
   .leg:nth-child(1) .leg-dot{background:#fff;color:var(--ink);}
   .leg:nth-child(1) .leg-time{color:#fff;opacity:.72;}
   .leg:nth-child(1) .leg-copy strong{color:#fff;font:400 38px/1 'DM Serif Display',serif;}
@@ -768,7 +772,8 @@
   .leg:nth-child(2n+3) .leg-copy strong{color:var(--ink);}
   .leg-copy{margin-top:auto;}
   .leg-copy strong{font-size:24px;}
-  .leg-copy small,.leg.is-active .leg-copy small{font-size:13px;line-height:1.5;}
+  .leg-copy small,.leg.is-active .leg-copy small{font-size:13px;line-height:1.5;min-height:3em;}
+  .leg:nth-child(1) .leg-copy small{min-height:0;}
   .leg:hover{transform:translateY(-4px);box-shadow:0 22px 42px rgba(16,26,53,.12);}
 
   @media(max-width:900px){
@@ -824,7 +829,10 @@
 </section>
 
 <div class="story-marquee" aria-label="Направления встречи">
-  <div class="story-marquee-track"><span>Великобритания</span><i>✦</i><span>США</span><i>✦</i><span>Канада</span><i>✦</i><span>Швейцария</span><i>✦</i><span>Италия</span><i>✦</i><span>Испания</span><i>✦</i><span>Португалия</span><i>✦</i><span>Китай</span><i>✦</i><span>Таиланд</span><i>✦</i><span>Великобритания</span><i>✦</i><span>США</span><i>✦</i><span>Канада</span></div>
+  <div class="story-marquee-track">
+    <div class="story-marquee-group"><span>Великобритания</span><i>✦</i><span>США</span><i>✦</i><span>Канада</span><i>✦</i><span>Швейцария</span><i>✦</i><span>Италия</span><i>✦</i><span>Испания</span><i>✦</i><span>Португалия</span><i>✦</i><span>Китай</span><i>✦</i><span>Таиланд</span></div>
+    <div class="story-marquee-group" aria-hidden="true"><span>Великобритания</span><i>✦</i><span>США</span><i>✦</i><span>Канада</span><i>✦</i><span>Швейцария</span><i>✦</i><span>Италия</span><i>✦</i><span>Испания</span><i>✦</i><span>Португалия</span><i>✦</i><span>Китай</span><i>✦</i><span>Таиланд</span></div>
+  </div>
 </div>
 
 <!-- WHY -->
