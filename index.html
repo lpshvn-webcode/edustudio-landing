@@ -866,6 +866,31 @@
   .modal-kicker{color:var(--coral);}
   .footer-logo{display:block;width:116px;height:auto;margin:0 auto 20px;}
 
+  /* Client feedback: clearer hierarchy and editorial comparison block */
+  .hero .route{font-size:15px;line-height:1.45;letter-spacing:.095em;font-weight:700;}
+  .uniqueness-panel{display:grid;grid-template-columns:1fr 72px 1fr;align-items:stretch;margin-top:32px;border:1px solid rgba(3,109,106,.13);border-radius:32px;overflow:hidden;background:#fff;box-shadow:0 24px 58px rgba(3,109,106,.09);}
+  .uniqueness-side{padding:38px 40px;}
+  .uniqueness-label{display:inline-flex;align-items:center;justify-content:center;min-width:64px;height:38px;padding:0 18px;border-radius:999px;background:var(--sky);font:700 13px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);}
+  .uniqueness-list{display:grid;gap:18px;margin:26px 0 0;padding:0;list-style:none;}
+  .uniqueness-list li{position:relative;padding-left:28px;font-size:18px;line-height:1.5;color:var(--muted);}
+  .uniqueness-list li::before{content:"—";position:absolute;left:0;color:var(--coral);font-weight:700;}
+  .uniqueness-divider{display:grid;place-items:center;background:linear-gradient(180deg,var(--sky),#DDF2F0);font-size:28px;color:var(--ink);}
+  .uniqueness-result{display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,var(--ink),#078784);color:#fff;}
+  .uniqueness-result .uniqueness-label{align-self:flex-start;background:var(--coral);color:#fff;}
+  .uniqueness-result p{margin:26px 0 0;font:400 28px/1.25 'DM Serif Display',serif;color:#fff;}
+  #formats .eyebrow{font-size:15px;line-height:1.35;letter-spacing:.14em;font-weight:700;}
+  .format-audience{margin:-2px 0 18px;padding:14px 16px;border-radius:14px;background:var(--sky);font-size:14px;line-height:1.5;font-style:italic;color:var(--muted);}
+  .ticket.highlight .format-audience{background:rgba(255,255,255,.1);color:#E3F4F2;}
+  .trust-copy{display:grid;gap:14px;margin:0 0 46px;}
+  .trust-copy-card{padding:26px;border-radius:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);}
+  .trust-copy-card h3{margin:0 0 9px;font:600 21px/1.25 'Space Grotesk',sans-serif;color:#fff;}
+  .trust-copy-card p{margin:0;color:#D9ECEA;font-size:16px;line-height:1.6;}
+  .stamps{grid-template-columns:repeat(3,1fr);}
+  .stamp-card .big{font-family:'Inter',sans-serif;font-weight:600;letter-spacing:-.035em;font-variant-numeric:tabular-nums;}
+  .stamp-card .lbl{max-width:180px;font-size:14px;line-height:1.4;color:#D9ECEA;}
+  .child-keyline{margin:22px 0 26px;padding:24px 26px;border-radius:20px;background:var(--sky);border-left:5px solid var(--coral);font:400 27px/1.22 'DM Serif Display',serif;color:var(--ink);}
+  #register .closing-title{max-width:780px;margin:0 auto 14px;font-family:'Space Grotesk',sans-serif!important;font-size:clamp(30px,3.2vw,42px);font-weight:600;line-height:1.12;letter-spacing:-.035em;text-wrap:balance;}
+
   /* Final visual polish after client review */
   header{overflow:visible;}
   .nav{min-height:98px;padding-top:10px;padding-bottom:10px;}
@@ -947,6 +972,12 @@
     .question-card::before{left:22px;top:22px;}
     .question-card:last-child{padding:24px 20px 24px 82px;}
     .question-card:last-child::before{left:20px;top:50%;transform:translateY(-50%);}
+    .hero .route{font-size:13px;}
+    .uniqueness-panel{grid-template-columns:1fr;}
+    .uniqueness-side{padding:28px 24px;}
+    .uniqueness-divider{min-height:58px;}
+    .uniqueness-result p{font-size:24px;}
+    .stamps{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -970,7 +1001,7 @@
       <div class="meta-row">
         <div class="meta-chip"><span>Дата</span>3 октября</div>
         <div class="meta-chip"><span>Город</span>Алматы</div>
-        <div class="meta-chip"><span>Место</span>Частная арт-галерея</div>
+        <div class="meta-chip"><span>Место</span>Арт-галерея Oylau · ул. Гоголя, 15</div>
       </div>
       <button type="button" class="btn coral" data-open-registration>Зарегистрировать семью →</button>
       <p class="hero-note">Количество семей ограничено. Участие по предварительной регистрации.</p>
@@ -1000,13 +1031,21 @@
       <h2>Не выставка. Личная встреча о будущем вашего ребёнка.</h2>
       <p><strong>Все ключевые вопросы — за один день.</strong> Страны, программы, стоимость, поступление, безопасность, проживание в резиденции, перспективы университетов.</p>
     </div>
-    <div class="reasons">
-      <div class="reason"><span class="num">01</span><h4>Страны и программы</h4><p>Сравните образовательные системы и поймите, какая программа подходит именно вашему ребёнку.</p></div>
-      <div class="reason"><span class="num">02</span><h4>Стоимость и поступление</h4><p>Обсудите бюджет, требования и перспективы поступления напрямую со школами.</p></div>
-      <div class="reason"><span class="num">03</span><h4>Безопасность и проживание</h4><p>Узнайте, как устроена жизнь ребёнка в резиденции и за её пределами.</p></div>
-      <div class="reason"><span class="num">04</span><h4>Путь в университет</h4><p>Сопоставьте выбор школы с дальнейшими образовательными целями семьи.</p></div>
+    <div class="uniqueness-panel">
+      <div class="uniqueness-side">
+        <span class="uniqueness-label">Это не</span>
+        <ul class="uniqueness-list">
+          <li>выставка с десятками случайных посетителей;</li>
+          <li>пятиминутный разговор у стенда;</li>
+          <li>самостоятельный поиск среди сотен школ.</li>
+        </ul>
+      </div>
+      <div class="uniqueness-divider" aria-hidden="true">→</div>
+      <div class="uniqueness-side uniqueness-result">
+        <span class="uniqueness-label">А</span>
+        <p>Отобранные школы + подготовленные семьи + возможность личного интервью + помощь EDU Studio в выборе.</p>
+      </div>
     </div>
-    <div class="why-visual-band"><span class="why-quote">Не ищите ответы по отдельности.<br>За один день соберите свою картину.</span><div class="why-metric"><strong>1 день</strong><span>для ключевых вопросов семьи</span></div><div class="why-metric"><strong>10+ стран</strong><span>и разные системы образования</span></div></div>
     <div class="section-action"><button type="button" class="btn coral" data-open-registration>Записаться на встречу →</button><span>Подберём подходящий формат участия</span></div>
   </div>
 </section>
@@ -1023,6 +1062,7 @@
         <div class="ticket-stub"><div class="cls">Класс</div><div class="price">Open</div></div>
         <div class="ticket-body">
           <div class="fname">Open Event · Бесплатно</div>
+          <p class="format-audience">Для семей, которые только начинают знакомство с миром среднего образования.</p>
           <ul>
             <li><span class="mark">✓</span> Вход на мероприятие</li>
             <li><span class="mark">✓</span> Общение со школами</li>
@@ -1040,6 +1080,7 @@
         <div class="ticket-stub"><div class="cls">Класс</div><div class="price">Private</div></div>
         <div class="ticket-body">
           <div class="fname">Private Meetings · 15 000 ₸</div>
+          <p class="format-audience">Для семей, которые рассматривают поступление в ближайшие 1–2 года.</p>
           <ul>
             <li><span class="mark">✓</span> Вход на мероприятие</li>
             <li><span class="mark">✓</span> Общение со школами</li>
@@ -1054,6 +1095,36 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="bg-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Доверие</div>
+      <h2>Почему EDU Studio приглашает именно эти школы</h2>
+    </div>
+    <div class="stamps">
+      <div class="stamp-card"><span class="big">18+</span><div class="lbl">лет в международном образовании</div></div>
+      <div class="stamp-card"><span class="big">80+</span><div class="lbl">школ-пансионов команда EDU Studio посетила лично</div></div>
+      <div class="stamp-card"><span class="big">A–Z</span><div class="lbl">сопровождение семьи от выбора школы до выпуска</div></div>
+    </div>
+    <div class="trust-copy">
+      <article class="trust-copy-card">
+        <h3>Мы знаем школы не только по презентациям.</h3>
+        <p>80+ boarding schools команда EDU Studio посетила лично.</p>
+      </article>
+      <article class="trust-copy-card">
+        <h3>Мы видели результаты наших студентов.</h3>
+        <p>Знаем не только процесс поступления, но и то, как дети адаптируются, учатся и развиваются внутри школы.</p>
+      </article>
+      <article class="trust-copy-card">
+        <h3>Мы не стремимся собрать максимальное количество школ.</h3>
+        <p>Наша задача — представить разные сильные образовательные модели, чтобы семья могла сравнить их.</p>
+      </article>
+    </div>
+    <div class="section-action on-dark-action"><button type="button" class="btn coral" data-open-registration>Познакомиться с EDU Studio →</button><span>Ответим на ваши вопросы до мероприятия</span></div>
   </div>
 </section>
 
@@ -1163,39 +1234,10 @@
         <h2>Это встреча не только для родителей.</h2>
         <p>Ваш ребёнок сможет сам поговорить с представителями школ, задать вопросы о проживании в резиденции, предметах, спорте, клубах и друзьях — и понять главное:</p>
         <div class="child-story-quote">«Могу ли я представить себя здесь?»</div>
-        <p><strong>Потому что школу выбирают родители. Но жить и учиться в ней будет ребёнок.</strong></p>
+        <div class="child-keyline">Потому что школу выбирают родители. Но жить и учиться в ней будет ребёнок.</div>
         <button type="button" class="btn coral" data-open-registration>Зарегистрировать семью →</button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="bg-ink">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Доверие</div>
-      <h2>Почему этим школам можно доверять</h2>
-    </div>
-    <p class="trust-lead">Мы не собираем максимальное количество участников. Мы приглашаем школы, которые готовы лично разговаривать с семьями.</p>
-    <div class="trust-principles">
-      <div class="trust-principle"><span>01</span><p>Мы приглашаем школы, которые лично посетили.</p></div>
-      <div class="trust-principle"><span>02</span><p>Главное — это школы, в которых были счастливы и успешны наши дети.</p></div>
-      <div class="trust-principle"><span>03</span><p>Мы создаём пространство, где семья может принять более осознанное решение.</p></div>
-    </div>
-    <h3 class="trust-subhead">Почему EDU Studio</h3>
-    <div class="stamps">
-      <div class="stamp-card"><span class="big">18+</span><div class="lbl">лет в международном образовании</div></div>
-      <div class="stamp-card"><span class="big">80+</span><div class="lbl">школ-пансионов посещены лично</div></div>
-      <div class="stamp-card"><span class="big">A–Z</span><div class="lbl">сопровождение от выбора школы до выпуска</div></div>
-      <div class="stamp-card"><span class="big">2</span><div class="lbl">пансион или проживание в приёмной семье</div></div>
-    </div>
-    <h3 class="trust-subhead">Кейсы выпускников и их родителей</h3>
-    <div class="cases">
-      <div class="case"><p>Сопровождаем семьи от выбора школы до выпуска.</p><div class="who">Полный образовательный маршрут</div></div>
-      <div class="case"><p>Работаем с частными школами-пансионами и государственными школами с проживанием в приёмных семьях.</p><div class="who">Разные форматы обучения и проживания</div></div>
-    </div>
-    <div class="section-action on-dark-action"><button type="button" class="btn coral" data-open-registration>Познакомиться с EDU Studio →</button><span>Ответим на ваши вопросы до мероприятия</span></div>
   </div>
 </section>
 
@@ -1238,10 +1280,10 @@
 <section id="register" class="cta-strip bg-ink" style="padding:72px 0;">
   <div class="wrap">
     <div class="board-cta"><span class="dot"></span> Регистрация открыта</div>
-    <h3 style="font-size:34px;max-width:760px;margin:0 auto 12px;">Возможно, именно здесь вы найдёте школу, в которой ваш ребёнок проведёт следующие несколько лет.</h3>
+    <h3 class="closing-title">Возможно, именно здесь вы найдёте школу, в которой ваш ребёнок проведёт следующие несколько лет.</h3>
     <p class="muted" style="margin-bottom:26px;">Познакомьтесь. Задайте вопросы. Сравните. И только потом принимайте решение.</p>
     <button type="button" class="btn coral" data-open-registration>Зарегистрировать семью →</button>
-    <p class="muted" style="margin-top:16px;font-size:13px;">3 октября · Алматы · Private Art Gallery</p>
+    <p class="muted" style="margin-top:16px;font-size:13px;">3 октября · Алматы · Арт-галерея Oylau · ул. Гоголя, 15</p>
   </div>
 </section>
 
