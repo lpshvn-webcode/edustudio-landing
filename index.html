@@ -12,6 +12,14 @@
 <meta name="twitter:title" content="Школы без границ — EDU Studio">
 <meta name="twitter:description" content="Закрытая встреча семей с представителями международных частных школ-пансионов 3 октября в Алматы.">
 <title>Школы без границ — EDU Studio Education Experts</title>
+<link rel="preload" as="image" href="school-card-cardiff.webp">
+<link rel="preload" as="image" href="school-card-appleby.webp">
+<link rel="preload" as="image" href="school-card-milan.webp">
+<link rel="preload" as="image" href="school-card-sotogrande.webp">
+<link rel="preload" as="image" href="school-card-cascais.webp">
+<link rel="preload" as="image" href="school-card-bangkok.webp">
+<link rel="preload" as="image" href="school-card-changzhou.webp">
+<link rel="preload" as="image" href="school-card-hangzhou.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -980,6 +988,116 @@
     .stamps{grid-template-columns:1fr;}
   }
 </style>
+<style>
+  /* Scalable school route: a cover-flow path designed for up to 20 schools */
+  .school-route-stage{position:relative;min-height:650px;border:1px solid rgba(255,255,255,.12);border-radius:38px;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 56% 46%,rgba(56,196,187,.18),transparent 35%),linear-gradient(145deg,#052B35 0%,#074D52 56%,#063C43 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 30px 70px rgba(0,0,0,.16);touch-action:pan-y;}
+  .school-route-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.2) .7px,transparent .7px);background-size:24px 24px;opacity:.22;mask-image:linear-gradient(90deg,#000,transparent 88%);}
+  .route-space{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;}
+  .route-space::before,.route-space::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 8% 16%,rgba(255,255,255,.86) 0 1px,transparent 1.6px),radial-gradient(circle at 19% 42%,rgba(167,235,229,.8) 0 1px,transparent 1.8px),radial-gradient(circle at 31% 10%,rgba(255,255,255,.66) 0 1.2px,transparent 1.9px),radial-gradient(circle at 43% 72%,rgba(255,255,255,.72) 0 .8px,transparent 1.5px),radial-gradient(circle at 57% 21%,rgba(167,235,229,.78) 0 1px,transparent 1.7px),radial-gradient(circle at 67% 84%,rgba(255,255,255,.7) 0 1px,transparent 1.6px),radial-gradient(circle at 74% 37%,rgba(255,255,255,.84) 0 1.2px,transparent 2px),radial-gradient(circle at 88% 13%,rgba(167,235,229,.78) 0 1px,transparent 1.7px),radial-gradient(circle at 94% 67%,rgba(255,255,255,.7) 0 1px,transparent 1.6px);opacity:.42;animation:route-stars-twinkle 5.8s ease-in-out infinite alternate;}
+  .route-space::after{transform:translate(4%,-2%) scale(.82);opacity:.25;animation-delay:-2.7s;animation-duration:7.4s;}
+  @keyframes route-stars-twinkle{0%{opacity:.2}55%{opacity:.48}100%{opacity:.3}}
+  .route-comet{position:absolute;left:-150px;width:112px;height:2px;border-radius:99px;background:linear-gradient(90deg,transparent,rgba(176,246,240,.16),rgba(255,255,255,.9));filter:drop-shadow(0 0 5px rgba(148,244,237,.72));opacity:0;transform:rotate(-19deg);animation:route-comet-fly 9s cubic-bezier(.34,.12,.48,.92) infinite;}
+  .route-comet::after{content:"";position:absolute;right:-2px;top:50%;width:5px;height:5px;border-radius:50%;background:#fff;box-shadow:0 0 10px 3px rgba(170,247,241,.72);transform:translateY(-50%);}
+  .route-comet.c1{top:14%;animation-delay:-1.8s;}
+  .route-comet.c2{top:52%;width:76px;animation-delay:-6.6s;animation-duration:12.5s;}
+  .route-comet.c3{top:31%;width:58px;animation-delay:-9.2s;animation-duration:15s;}
+  @keyframes route-comet-fly{0%,10%{opacity:0;transform:translate3d(-120px,-70px,0) rotate(-19deg)}15%{opacity:.78}40%{opacity:.7}48%,100%{opacity:0;transform:translate3d(960px,330px,0) rotate(-19deg)}}
+  .school-route-map{position:absolute;inset:42px 10px 76px;width:calc(100% - 20px);height:calc(100% - 118px);z-index:0;overflow:visible;}
+  .school-route-map path{fill:none;stroke:rgba(255,255,255,.22);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:3 9;animation:school-route-dash 24s linear infinite;}
+  .school-route-map .route-glow{stroke:rgba(53,205,195,.18);stroke-width:18;stroke-dasharray:none;filter:blur(12px);}
+  @keyframes school-route-dash{to{stroke-dashoffset:-120}}
+  .route-terminal{position:absolute;left:30px;bottom:28px;z-index:12;display:flex;align-items:center;gap:13px;color:#fff;}
+  .route-terminal-core{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:var(--coral);box-shadow:0 0 0 13px rgba(239,67,84,.1),0 18px 36px rgba(0,0,0,.28);font:700 32px 'Space Grotesk',sans-serif;}
+  .route-terminal-copy span{display:block;font:700 9px 'IBM Plex Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#FF9AA5;}
+  .route-terminal-copy strong{display:block;margin-top:5px;font:600 14px 'Space Grotesk',sans-serif;}
+  .school-route-track{position:absolute;inset:0;z-index:4;}
+  .school-route-card{--card-x:50%;--card-y:50%;--card-scale:1;--card-opacity:0;position:absolute;left:var(--card-x);top:var(--card-y);z-index:var(--card-layer,1);width:226px;min-height:124px;padding:15px 16px 14px;border:1px solid rgba(255,255,255,.22);border-radius:19px;background:rgba(255,255,255,.1);color:#fff;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 16px 38px rgba(0,0,0,.18);cursor:pointer;text-align:left;opacity:var(--card-opacity);pointer-events:var(--card-events,none);transform:translate(-50%,-50%) scale(var(--card-scale)) rotate(var(--card-tilt,0deg));transition:left .72s cubic-bezier(.2,.78,.2,1),top .72s cubic-bezier(.2,.78,.2,1),transform .72s cubic-bezier(.2,.78,.2,1),opacity .45s ease,background .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease;overflow:hidden;}
+  .school-route-card:hover,.school-route-card:focus-visible{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.18);outline:none;}
+  .school-route-card.is-active{width:272px;min-height:154px;padding:20px 20px 18px;background:#F7FBFA;color:var(--ink);border-color:#fff;box-shadow:0 28px 64px rgba(0,0,0,.34);}
+  .school-route-card .school-route-number{position:absolute;right:15px;top:13px;font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.08em;opacity:.52;}
+  .school-route-card .school-country{display:block;margin:0 28px 7px 0;font:700 9px 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#FF9AA5;}
+  .school-card-flag{position:relative;display:inline-block;width:22px;height:15px;margin-right:7px;border-radius:3px;vertical-align:-3px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.34),0 2px 5px rgba(0,0,0,.16);}
+  .flag-gb{background:linear-gradient(28deg,transparent 43%,#fff 43% 51%,#CF142B 51% 56%,transparent 56%),linear-gradient(-28deg,transparent 43%,#fff 43% 51%,#CF142B 51% 56%,transparent 56%),linear-gradient(90deg,transparent 40%,#fff 40% 60%,transparent 60%),linear-gradient(transparent 35%,#fff 35% 65%,transparent 65%),linear-gradient(90deg,transparent 46%,#CF142B 46% 54%,transparent 54%),linear-gradient(transparent 43%,#CF142B 43% 57%,transparent 57%),#012169;}
+  .flag-ca{background:linear-gradient(90deg,#D80621 0 27%,#fff 27% 73%,#D80621 73%);}.flag-ca::after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:#D80621;font-size:8px;}
+  .flag-it{background:linear-gradient(90deg,#009246 0 33.33%,#fff 33.33% 66.66%,#CE2B37 66.66%);}
+  .flag-es{background:linear-gradient(#AA151B 0 25%,#F1BF00 25% 75%,#AA151B 75%);}
+  .flag-pt{background:linear-gradient(90deg,#046A38 0 40%,#DA291C 40%);}.flag-pt::after{content:"•";position:absolute;left:7px;top:1px;color:#FFD100;font-size:11px;}
+  .flag-th{background:linear-gradient(#A51931 0 17%,#fff 17% 33%,#2D2A4A 33% 67%,#fff 67% 83%,#A51931 83%);}
+  .flag-cn{background:#DE2910;}.flag-cn::after{content:"★";position:absolute;left:3px;top:1px;color:#FFDE00;font-size:7px;}
+  .school-route-card.is-active .school-country{color:var(--coral-deep);}
+  .school-route-card strong{display:block;padding-right:66px;font:600 14px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.015em;}
+  .school-route-card.is-active strong{padding-right:92px;font-size:18px;}
+  .school-route-card small{display:block;margin-top:10px;font-size:10px;opacity:.7;}
+  .school-route-card.is-active small{color:var(--blue);opacity:1;}
+  .school-card-thumb{position:absolute;right:13px;top:38px;width:54px;height:54px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.28);box-shadow:0 8px 18px rgba(0,0,0,.2);filter:saturate(.86);transition:width .72s cubic-bezier(.2,.78,.2,1),height .72s cubic-bezier(.2,.78,.2,1),filter .25s ease;}
+  .school-route-card.is-active .school-card-thumb{right:16px;top:43px;width:78px;height:72px;border-color:rgba(3,109,106,.13);filter:saturate(1);}
+  .school-route-controls{position:absolute;right:24px;bottom:22px;z-index:14;display:flex;align-items:center;gap:8px;padding:6px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(1,30,38,.68);backdrop-filter:blur(12px);}
+  .school-route-controls button{width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:20px;cursor:pointer;transition:background .2s ease,color .2s ease;}
+  .school-route-controls button:hover,.school-route-controls button:focus-visible{background:#fff;color:var(--ink);outline:none;}
+  .school-route-count{min-width:66px;text-align:center;font:600 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.08em;}
+  .school-route-caption{position:absolute;right:25px;top:22px;z-index:10;font:600 9px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.68);}
+  .school-orbit-note{display:flex;align-items:center;gap:10px;margin:24px 0 28px;color:#D9ECEA;font-size:12px;}
+  .school-orbit-note::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 6px rgba(239,67,84,.14);}
+
+  .school-modal{width:min(1080px,calc(100% - 28px));max-height:calc(100vh - 28px);margin:auto;padding:0;border:0;border-radius:30px;background:#F7FBFA;color:var(--ink);box-shadow:0 42px 100px rgba(4,11,28,.48);overflow:auto;}
+  .school-modal[open]{animation:modal-in .3s cubic-bezier(.2,.8,.2,1) both;}
+  .school-modal::backdrop{background:rgba(4,14,32,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:backdrop-in .25s ease both;}
+  .school-modal-shell{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);min-height:650px;}
+  .school-gallery{padding:18px;background:#071D2B;display:flex;flex-direction:column;gap:12px;}
+  .school-gallery-main{position:relative;min-height:470px;flex:1;border-radius:20px;overflow:hidden;background:#0D2D38;}
+  .school-gallery-main img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;}
+  .gallery-arrow{position:absolute;top:50%;z-index:2;width:42px;height:42px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:var(--ink);font-size:22px;cursor:pointer;transform:translateY(-50%);box-shadow:0 8px 24px rgba(0,0,0,.22);}
+  .gallery-arrow:hover{background:#fff;}.gallery-arrow.prev{left:14px}.gallery-arrow.next{right:14px}
+  .school-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
+  .school-thumb{height:62px;padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:#153846;cursor:pointer;opacity:.62;transition:opacity .2s ease,border-color .2s ease;}
+  .school-thumb:hover,.school-thumb[aria-pressed="true"]{opacity:1;border-color:var(--coral);}
+  .school-thumb img{width:100%;height:100%;object-fit:cover;}
+  .school-profile{position:relative;padding:38px 40px 36px;overflow:auto;}
+  .school-profile .modal-close{z-index:3;}
+  .school-brand{display:flex;align-items:center;gap:16px;padding-right:44px;margin-bottom:24px;}
+  .school-brand img{width:86px;height:64px;object-fit:contain;border-radius:12px;background:#fff;border:1px solid var(--line);padding:7px;}
+  .school-brand span{display:block;font:700 10px 'IBM Plex Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--coral-deep);}
+  .school-profile h2{font:400 clamp(34px,4vw,52px)/.98 'DM Serif Display',serif;margin:8px 0 12px;color:var(--ink);}
+  .school-meta{font:600 13px 'Space Grotesk',sans-serif;color:var(--blue);}
+  .school-description{margin:24px 0;color:var(--muted);font-size:14px;line-height:1.65;}
+  .school-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0;padding:0;list-style:none;}
+  .school-facts li{padding:13px 14px;border-radius:14px;background:#E8F6F5;color:var(--ink);font-size:12px;line-height:1.35;}
+  .school-facts li::before{content:"✦";margin-right:7px;color:var(--coral);}
+  .school-profile .btn{margin-top:26px;}
+
+  @media(max-width:980px){
+    .school-route-stage{min-height:610px;}
+    .school-modal-shell{grid-template-columns:1fr;}
+    .school-gallery{min-height:520px;}
+    .school-profile{overflow:visible;}
+  }
+  @media(max-width:700px){
+    .school-route-stage{min-height:520px;margin:0 -6px;border-radius:28px;}
+    .school-route-map{inset:30px -120px 80px;width:calc(100% + 240px);height:calc(100% - 110px);}
+    .school-route-card{width:184px;min-height:112px;padding:13px;}
+    .school-route-card.is-active{width:236px;min-height:146px;padding:17px;}
+    .school-route-card strong{font-size:13px;}.school-route-card.is-active strong{font-size:16px;}
+    .school-route-card strong{padding-right:58px;}.school-route-card.is-active strong{padding-right:78px;}
+    .school-card-thumb{right:10px;top:36px;width:48px;height:48px;}.school-route-card.is-active .school-card-thumb{right:13px;top:42px;width:66px;height:62px;}
+    .route-terminal{left:20px;bottom:20px;}.route-terminal-core{width:70px;height:70px;font-size:25px;}.route-terminal-copy{display:none;}
+    .school-route-controls{right:14px;bottom:16px;}.school-route-controls button{width:38px;height:38px;}
+    .school-route-caption{right:18px;top:18px;}
+    .school-gallery{min-height:430px;padding:10px;}
+    .school-gallery-main{min-height:330px;}
+    .school-thumbs{grid-template-columns:repeat(4,1fr);}
+    .school-thumb{height:54px;}
+    .school-profile{padding:30px 22px 28px;}
+    .school-brand{align-items:flex-start;flex-direction:column;}
+    .school-brand img{width:110px;height:70px;}
+    .school-facts{grid-template-columns:1fr;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .school-route-map path{animation:none;}
+    .route-space::before,.route-space::after,.route-comet{animation:none;}
+    .route-comet{display:none;}
+    .school-route-card{transition:none;}
+  }
+</style>
 </head>
 <body>
 
@@ -1158,35 +1276,40 @@
       <p>Название, страна и возраст учащихся — плюс краткие отметки и комментарии, чтобы родители сразу увидели школу, которая может подойти их ребёнку.</p>
     </div>
     <div class="route-lab">
-      <div class="route-orbit" aria-label="Интерактивная карта направлений">
-        <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div>
-        <button type="button" class="country-node n1" data-country="Великобритания"><b>LON</b><span>Великобритания</span></button>
-        <button type="button" class="country-node n2" data-country="США"><b>NYC</b><span>США</span></button>
-        <button type="button" class="country-node n3" data-country="Канада"><b>YYZ</b><span>Канада</span></button>
-        <button type="button" class="country-node n4" data-country="Швейцария"><b>ZRH</b><span>Швейцария</span></button>
-        <button type="button" class="country-node n5" data-country="Италия"><b>MIL</b><span>Италия</span></button>
-        <button type="button" class="country-node n6" data-country="Испания"><b>MAD</b><span>Испания</span></button>
-        <div class="orbit-core"><small>ваш маршрут</small><strong>ALA</strong><span><b data-selected-count>0</b> выбрано</span></div>
+      <div class="school-route-stage" data-school-route aria-label="Интерактивный маршрут школ" tabindex="0">
+        <div class="route-space" aria-hidden="true"><span class="route-comet c1"></span><span class="route-comet c2"></span><span class="route-comet c3"></span></div>
+        <svg class="school-route-map" viewBox="0 0 720 520" preserveAspectRatio="none" aria-hidden="true">
+          <path class="route-glow" d="M 42 452 C 142 394, 116 238, 250 188 S 450 276, 492 144 S 620 52, 704 92" />
+          <path d="M 42 452 C 142 394, 116 238, 250 188 S 450 276, 492 144 S 620 52, 704 92" />
+        </svg>
+        <span class="school-route-caption">листайте маршрут · 8 школ</span>
+        <div class="school-route-track">
+          <button type="button" class="school-route-card" data-school="cardiff"><span class="school-route-number">01</span><span class="school-country"><span class="school-card-flag flag-gb" aria-hidden="true"></span>Великобритания</span><strong>Cardiff Sixth Form College</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-cardiff.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="appleby"><span class="school-route-number">02</span><span class="school-country"><span class="school-card-flag flag-ca" aria-hidden="true"></span>Канада</span><strong>Appleby College</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-appleby.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="milan"><span class="school-route-number">03</span><span class="school-country"><span class="school-card-flag flag-it" aria-hidden="true"></span>Италия</span><strong>International School of Milan</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-milan.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="sotogrande"><span class="school-route-number">04</span><span class="school-country"><span class="school-card-flag flag-es" aria-hidden="true"></span>Испания</span><strong>Sotogrande International School</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-sotogrande.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="cascais"><span class="school-route-number">05</span><span class="school-country"><span class="school-card-flag flag-pt" aria-hidden="true"></span>Португалия</span><strong>King’s College School Cascais</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-cascais.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="bangkok"><span class="school-route-number">06</span><span class="school-country"><span class="school-card-flag flag-th" aria-hidden="true"></span>Таиланд</span><strong>Wycombe Abbey Bangkok</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-bangkok.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="changzhou"><span class="school-route-number">07</span><span class="school-country"><span class="school-card-flag flag-cn" aria-hidden="true"></span>Китай</span><strong>Wycombe Abbey Changzhou</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-changzhou.webp" loading="eager" decoding="async" alt=""></button>
+          <button type="button" class="school-route-card" data-school="hangzhou"><span class="school-route-number">08</span><span class="school-country"><span class="school-card-flag flag-cn" aria-hidden="true"></span>Китай</span><strong>Wycombe Abbey Hangzhou</strong><small>Открыть профиль →</small><img class="school-card-thumb" src="school-card-hangzhou.webp" loading="eager" decoding="async" alt=""></button>
+        </div>
+        <div class="route-terminal" aria-hidden="true">
+          <div class="route-terminal-core">ALA</div>
+          <div class="route-terminal-copy"><span>точка отправления</span><strong>Алматы · 3 октября</strong></div>
+        </div>
+        <div class="school-route-controls" aria-label="Навигация по школам">
+          <button type="button" data-route-prev aria-label="Предыдущая школа">←</button>
+          <span class="school-route-count" data-route-count aria-live="polite">01 / 08</span>
+          <button type="button" data-route-next aria-label="Следующая школа">→</button>
+        </div>
       </div>
       <div class="route-panel">
-        <span class="route-panel-kicker">СОБЕРИТЕ СВОЙ МАРШРУТ</span>
-        <h3>Школы из разных стран — в одном пространстве</h3>
-        <p>Нажимайте на направления: мы учтём страны и интересы ребёнка при составлении программы встреч.</p>
-        <div class="selected-countries" data-selected-countries><span>Пока ничего не выбрано</span></div>
+        <span class="route-panel-kicker">ВЫБЕРИТЕ ШКОЛУ</span>
+        <h3>Познакомьтесь со школами до личной встречи</h3>
+        <p>Нажмите на плашку школы: откроется профиль с ключевой информацией, особенностями и фотографиями кампуса.</p>
+        <div class="school-orbit-note">Автомаршрут останавливается при взаимодействии</div>
         <button type="button" class="btn coral" data-open-registration>Обсудить маршрут →</button>
       </div>
-    </div>
-    <div class="board">
-      <div class="route-row"><span class="from">ALA →</span><span class="code">LON</span><span class="country">Великобритания</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">NYC</span><span class="country">США</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">YYZ</span><span class="country">Канада</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">ZRH</span><span class="country">Швейцария</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">MIL</span><span class="country">Италия</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">MAD</span><span class="country">Испания</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">LIS</span><span class="country">Португалия</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">NAS</span><span class="country">Багамские острова</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">PEK</span><span class="country">Китай</span><span class="status">Board</span></div>
-      <div class="route-row"><span class="from">ALA →</span><span class="code">BKK</span><span class="country">Таиланд</span><span class="status">Board</span></div>
     </div>
     <div class="tags">
       <span class="tag a">Academic Excellence</span>
@@ -1194,7 +1317,7 @@
       <span class="tag a">Creative &amp; Performing Arts</span>
       <span class="tag b">STEM &amp; Innovation</span>
     </div>
-    <div class="section-action"><button type="button" class="btn coral" data-open-registration>Встретиться со школами →</button><span>Нажмите на страну, чтобы отметить интересующие направления</span></div>
+    <div class="section-action"><button type="button" class="btn coral" data-open-registration>Встретиться со школами →</button><span>Выберите школу, чтобы открыть её профиль и галерею</span></div>
   </div>
 </section>
 
@@ -1287,6 +1410,30 @@
   </div>
 </section>
 
+<dialog class="school-modal" id="schoolModal" aria-labelledby="schoolModalTitle">
+  <div class="school-modal-shell">
+    <div class="school-gallery">
+      <div class="school-gallery-main">
+        <img src="" alt="" data-school-main-image>
+        <button type="button" class="gallery-arrow prev" data-gallery-prev aria-label="Предыдущее изображение">‹</button>
+        <button type="button" class="gallery-arrow next" data-gallery-next aria-label="Следующее изображение">›</button>
+      </div>
+      <div class="school-thumbs" data-school-thumbs aria-label="Галерея школы"></div>
+    </div>
+    <div class="school-profile">
+      <button type="button" class="modal-close" data-close-school aria-label="Закрыть профиль школы">×</button>
+      <div class="school-brand">
+        <img src="" alt="" data-school-logo>
+        <div><span data-school-country></span><h2 id="schoolModalTitle" data-school-title></h2></div>
+      </div>
+      <div class="school-meta" data-school-meta></div>
+      <p class="school-description" data-school-description></p>
+      <ul class="school-facts" data-school-facts></ul>
+      <button type="button" class="btn coral" data-school-register>Записаться на встречу →</button>
+    </div>
+  </div>
+</dialog>
+
 <dialog class="registration-modal" id="registrationModal" aria-labelledby="registrationTitle">
   <button type="button" class="modal-close" data-close-modal aria-label="Закрыть форму">×</button>
   <div class="modal-kicker">EDU STUDIO · EDUCATION EXPERTS</div>
@@ -1334,6 +1481,73 @@
     const formContent = modal.querySelector('[data-form-content]');
     const successContent = modal.querySelector('[data-form-success]');
     let lastTrigger = null;
+
+    const schoolProfiles = {
+      cardiff: {
+        country: 'Великобритания', name: 'Cardiff Sixth Form College',
+        meta: 'Кардифф · 16–18 лет · совместное обучение · пансион',
+        description: 'Академически ориентированный британский sixth form college для старшеклассников, нацеленных на сильные результаты A-level и поступление в ведущие университеты.',
+        facts: ['Программы GCSE и A-level', 'Сильный фокус на университетской подготовке', 'Современный академический кампус', 'Проживание в школьной резиденции'],
+        logo: 'schools/cardiff-sixth-form-college/logo.png',
+        images: ['schools/cardiff-sixth-form-college/academic-hub.webp','schools/cardiff-sixth-form-college/students-campus.jpg','schools/cardiff-sixth-form-college/graduation-ceremony.jpg','schools/cardiff-sixth-form-college/boarding-room.jpg','schools/cardiff-sixth-form-college/student-campus.jpg']
+      },
+      appleby: {
+        country: 'Канада', name: 'Appleby College',
+        meta: 'Оквилл, Онтарио · 11–18 лет · совместное обучение · пансион',
+        description: 'Канадская школа на берегу озера Онтарио сочетает академическую подготовку, лидерские программы, спорт и насыщенную жизнь международного сообщества.',
+        facts: ['Канадская школьная программа', 'Дневной и пансионный форматы', 'Спорт и лидерское развитие', 'Кампус у озера Онтарио'],
+        logo: 'schools/appleby-college/logo.jpg',
+        images: ['schools/appleby-college/campus-01.jpg','schools/appleby-college/students-01.jpg','schools/appleby-college/campus-02.jpg','schools/appleby-college/students-02.jpg','schools/appleby-college/campus-04.jpg','schools/appleby-college/campus-05.jpg']
+      },
+      milan: {
+        country: 'Италия', name: 'International School of Milan',
+        meta: 'Милан · 2–18 лет · совместное обучение · пансион',
+        description: 'Международная школа полного цикла с программами IB, современной инфраструктурой и резиденцией для старшеклассников в одном из главных европейских городов.',
+        facts: ['Полный цикл программ IB', 'Международное школьное сообщество', 'Бассейн и спортивная инфраструктура', 'Современная boarding-резиденция'],
+        logo: 'schools/international-school-of-milan/logo.png',
+        images: ['schools/international-school-of-milan/campus.jpeg','schools/international-school-of-milan/swimming-pool.jpeg','schools/international-school-of-milan/football-field.jpeg','schools/international-school-of-milan/classroom.jpg','schools/international-school-of-milan/boarding-common-room.jpeg','schools/international-school-of-milan/boarding-study.jpeg']
+      },
+      sotogrande: {
+        country: 'Испания', name: 'Sotogrande International School',
+        meta: 'Кадис · 3–18 лет · совместное обучение · школа-пансион · основана в 1978',
+        description: 'Международная школа недалеко от Малаги и средиземноморского побережья. В сообществе учатся около 1300 школьников 80 национальностей.',
+        facts: ['Программы International Baccalaureate', '1300 учеников и 80 национальностей', 'Академии тенниса, поло и гольфа', 'Резиденция и насыщенная outdoor-программа'],
+        logo: 'schools/sotogrande-international-school/logo.png',
+        images: ['schools/sotogrande-international-school/campus-entrance.jpeg','schools/sotogrande-international-school/senior-campus.jpg','schools/sotogrande-international-school/students-arrival.jpeg','schools/sotogrande-international-school/students-campus.jpg','schools/sotogrande-international-school/swimming-pool.jpeg','schools/sotogrande-international-school/boarding-room.jpeg','schools/sotogrande-international-school/graduation.jpeg','schools/sotogrande-international-school/golf-academy.jpg']
+      },
+      cascais: {
+        country: 'Португалия', name: 'King’s College School Cascais',
+        meta: 'Кашкайш · 1–18 лет · совместное обучение',
+        description: 'Британская международная школа в Кашкайше с современным кампусом, сильной академической программой и пространствами для спорта, науки и творчества.',
+        facts: ['Британская образовательная модель', 'Современный кампус рядом с Лиссабоном', 'Наука, спорт и творческие дисциплины', 'Комфортная школьная резиденция'],
+        logo: 'schools/kings-college-school-cascais/logo.jpg',
+        images: ['schools/kings-college-school-cascais/campus-aerial-render.jpeg','schools/kings-college-school-cascais/central-atrium.jpeg','schools/kings-college-school-cascais/science-classroom.jpeg','schools/kings-college-school-cascais/sports-field.jpg','schools/kings-college-school-cascais/swimming-pool.jpeg','schools/kings-college-school-cascais/boarding-room.jpeg','schools/kings-college-school-cascais/boarding-common-room.jpeg','schools/kings-college-school-cascais/auditorium.jpeg']
+      },
+      bangkok: {
+        country: 'Таиланд', name: 'Wycombe Abbey Bangkok',
+        meta: 'Бангкок · британская программа · дневная школа',
+        description: 'Новый международный кампус Wycombe Abbey в Бангкоке объединяет британскую академическую модель, выразительную архитектуру и развитую спортивную инфраструктуру.',
+        facts: ['Британская образовательная модель', 'Современные учебные пространства', 'Олимпийский бассейн и теннисные корты', 'Театр и творческие студии'],
+        logo: '',
+        images: ['schools/wycombe-abbey-bangkok/heritage-campus.jpg','schools/wycombe-abbey-bangkok/campus-interior-render.jpg','schools/wycombe-abbey-bangkok/olympic-pool.jpg','schools/wycombe-abbey-bangkok/tennis-courts.jpg','schools/wycombe-abbey-bangkok/black-box-theatre.jpg','schools/wycombe-abbey-bangkok/students-library.jpg']
+      },
+      changzhou: {
+        country: 'Китай', name: 'Wycombe Abbey Changzhou',
+        meta: 'Чанчжоу · 3–18 лет · совместное обучение · пансион',
+        description: 'Международная школа-пансион на просторном кампусе у воды, где британская академическая программа дополнена спортом, искусством и инженерными дисциплинами.',
+        facts: ['Британская и международная программы', 'Полный пансион', 'Центр водных видов спорта', 'Performing arts и инженерные лаборатории'],
+        logo: 'schools/wycombe-abbey-changzhou/logo.png',
+        images: ['schools/wycombe-abbey-changzhou/campus-waterfront.jpg','schools/wycombe-abbey-changzhou/boarding-house-students.jpg','schools/wycombe-abbey-changzhou/rowing-centre.jpg','schools/wycombe-abbey-changzhou/performing-arts-centre.jpg','schools/wycombe-abbey-changzhou/science-lab.jpg','schools/wycombe-abbey-changzhou/dorm-room.jpg']
+      },
+      hangzhou: {
+        country: 'Китай', name: 'Wycombe Abbey Hangzhou',
+        meta: 'Ханчжоу · 3–18 лет · совместное обучение · пансион',
+        description: 'Школа Wycombe Abbey в Ханчжоу предлагает британский подход к образованию, сильную pastoral care и широкий выбор спорта, технологий и творческих занятий.',
+        facts: ['Британская академическая программа', 'Дневной и пансионный форматы', 'STEM, дизайн и робототехника', 'Спорт и outdoor-образование'],
+        logo: 'schools/wycombe-abbey-hangzhou/logo.png',
+        images: ['schools/wycombe-abbey-hangzhou/campus-lake-01.jpg','schools/wycombe-abbey-hangzhou/school-meeting.jpg','schools/wycombe-abbey-hangzhou/science-class.jpg','schools/wycombe-abbey-hangzhou/robotics-class.jpg','schools/wycombe-abbey-hangzhou/swimming-pool.jpg','schools/wycombe-abbey-hangzhou/horse-riding.jpg','schools/wycombe-abbey-hangzhou/art-class.jpg']
+      }
+    };
 
     const openModal = (trigger) => {
       lastTrigger = trigger;
@@ -1391,24 +1605,187 @@
       });
     });
 
-    const countryNodes = [...document.querySelectorAll('.country-node')];
-    const selectedCount = document.querySelector('[data-selected-count]');
-    const selectedList = document.querySelector('[data-selected-countries]');
-    const renderSelectedCountries = () => {
-      const selected = countryNodes.filter((node) => node.classList.contains('is-selected')).map((node) => node.dataset.country);
-      selectedCount.textContent = selected.length;
-      selectedList.innerHTML = selected.length
-        ? selected.map((country) => `<span class="picked">${country}</span>`).join('')
-        : '<span>Пока ничего не выбрано</span>';
+    const schoolModal = document.getElementById('schoolModal');
+    const schoolMainImage = schoolModal.querySelector('[data-school-main-image]');
+    const schoolThumbs = schoolModal.querySelector('[data-school-thumbs]');
+    const schoolLogo = schoolModal.querySelector('[data-school-logo]');
+    const schoolCountry = schoolModal.querySelector('[data-school-country]');
+    const schoolTitle = schoolModal.querySelector('[data-school-title]');
+    const schoolMeta = schoolModal.querySelector('[data-school-meta]');
+    const schoolDescription = schoolModal.querySelector('[data-school-description]');
+    const schoolFacts = schoolModal.querySelector('[data-school-facts]');
+    let activeSchool = null;
+    let activeImageIndex = 0;
+    let lastSchoolTrigger = null;
+
+    const renderSchoolImage = (index) => {
+      if (!activeSchool) return;
+      activeImageIndex = (index + activeSchool.images.length) % activeSchool.images.length;
+      schoolMainImage.src = activeSchool.images[activeImageIndex];
+      schoolMainImage.alt = `${activeSchool.name} — фотография ${activeImageIndex + 1}`;
+      schoolThumbs.querySelectorAll('.school-thumb').forEach((thumb, thumbIndex) => {
+        thumb.setAttribute('aria-pressed', String(thumbIndex === activeImageIndex));
+      });
     };
-    countryNodes.forEach((node) => {
-      node.setAttribute('aria-pressed', 'false');
-      node.addEventListener('click', () => {
-        const selected = node.classList.toggle('is-selected');
-        node.setAttribute('aria-pressed', String(selected));
-        renderSelectedCountries();
+
+    const openSchoolProfile = (schoolId, trigger) => {
+      activeSchool = schoolProfiles[schoolId];
+      if (!activeSchool) return;
+      lastSchoolTrigger = trigger;
+      schoolLogo.hidden = !activeSchool.logo;
+      if (activeSchool.logo) {
+        schoolLogo.src = activeSchool.logo;
+        schoolLogo.alt = `Логотип ${activeSchool.name}`;
+      } else {
+        schoolLogo.removeAttribute('src');
+        schoolLogo.alt = '';
+      }
+      schoolCountry.textContent = activeSchool.country;
+      schoolTitle.textContent = activeSchool.name;
+      schoolMeta.textContent = activeSchool.meta;
+      schoolDescription.textContent = activeSchool.description;
+      schoolFacts.replaceChildren(...activeSchool.facts.map((fact) => {
+        const item = document.createElement('li');
+        item.textContent = fact;
+        return item;
+      }));
+      schoolThumbs.replaceChildren(...activeSchool.images.map((image, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'school-thumb';
+        button.setAttribute('aria-label', `Показать фотографию ${index + 1}`);
+        button.addEventListener('click', () => renderSchoolImage(index));
+        const thumbnail = document.createElement('img');
+        thumbnail.src = image;
+        thumbnail.alt = '';
+        button.append(thumbnail);
+        return button;
+      }));
+      renderSchoolImage(0);
+      schoolModal.showModal();
+      requestAnimationFrame(() => schoolModal.querySelector('[data-close-school]').focus());
+    };
+
+    const closeSchoolProfile = () => {
+      schoolModal.close();
+      if (lastSchoolTrigger) lastSchoolTrigger.focus();
+    };
+
+    document.querySelectorAll('[data-school]').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (button.classList.contains('school-route-card') && !button.classList.contains('is-active')) return;
+        openSchoolProfile(button.dataset.school, button);
       });
     });
+
+    const schoolRoute = document.querySelector('[data-school-route]');
+    if (schoolRoute) {
+      const routeCards = [...schoolRoute.querySelectorAll('.school-route-card')];
+      const routeCount = schoolRoute.querySelector('[data-route-count]');
+      const routeReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const desktopSlots = [
+        { x: -2, y: 28, scale: .6, opacity: .08, tilt: -8 },
+        { x: 12, y: 20, scale: .68, opacity: .34, tilt: -7 },
+        { x: 31, y: 30, scale: .82, opacity: .72, tilt: -4 },
+        { x: 56, y: 47, scale: 1.08, opacity: 1, tilt: 0 },
+        { x: 76, y: 64, scale: .84, opacity: .76, tilt: 4 },
+        { x: 92, y: 48, scale: .68, opacity: .38, tilt: 7 },
+        { x: 103, y: 25, scale: .58, opacity: .08, tilt: 9 }
+      ];
+      const mobileSlots = [
+        { x: -14, y: 24, scale: .62, opacity: .08, tilt: -7 },
+        { x: 12, y: 29, scale: .72, opacity: .4, tilt: -5 },
+        { x: 50, y: 45, scale: 1, opacity: 1, tilt: 0 },
+        { x: 88, y: 61, scale: .72, opacity: .42, tilt: 5 },
+        { x: 114, y: 38, scale: .62, opacity: .08, tilt: 7 }
+      ];
+      let routeActiveIndex = Math.min(3, routeCards.length - 1);
+      let routeTimer = null;
+      let routePointerStart = null;
+
+      const wrapRouteDelta = (index) => {
+        let delta = index - routeActiveIndex;
+        const half = routeCards.length / 2;
+        if (delta > half) delta -= routeCards.length;
+        if (delta < -half) delta += routeCards.length;
+        return delta;
+      };
+
+      const renderSchoolRoute = () => {
+        const mobile = window.matchMedia('(max-width: 700px)').matches;
+        const slots = mobile ? mobileSlots : desktopSlots;
+        const middle = Math.floor(slots.length / 2);
+        routeCards.forEach((card, index) => {
+          const delta = wrapRouteDelta(index);
+          const slot = slots[delta + middle];
+          const visible = Boolean(slot);
+          card.classList.toggle('is-active', delta === 0);
+          card.setAttribute('aria-current', delta === 0 ? 'true' : 'false');
+          card.style.setProperty('--card-x', `${visible ? slot.x : 50}%`);
+          card.style.setProperty('--card-y', `${visible ? slot.y : 50}%`);
+          card.style.setProperty('--card-scale', visible ? slot.scale : .5);
+          card.style.setProperty('--card-opacity', visible ? slot.opacity : 0);
+          card.style.setProperty('--card-tilt', `${visible ? slot.tilt : 0}deg`);
+          card.style.setProperty('--card-layer', visible ? 20 - Math.abs(delta) : 0);
+          card.style.setProperty('--card-events', visible ? 'auto' : 'none');
+        });
+        routeCount.textContent = `${String(routeActiveIndex + 1).padStart(2, '0')} / ${String(routeCards.length).padStart(2, '0')}`;
+      };
+
+      const moveSchoolRoute = (direction) => {
+        routeActiveIndex = (routeActiveIndex + direction + routeCards.length) % routeCards.length;
+        renderSchoolRoute();
+      };
+      const stopSchoolRoute = () => {
+        if (routeTimer) window.clearInterval(routeTimer);
+        routeTimer = null;
+      };
+      const startSchoolRoute = () => {
+        stopSchoolRoute();
+        if (!routeReducedMotion) routeTimer = window.setInterval(() => moveSchoolRoute(1), 4200);
+      };
+
+      routeCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+          if (card.classList.contains('is-active')) return;
+          routeActiveIndex = index;
+          renderSchoolRoute();
+          stopSchoolRoute();
+        });
+      });
+      schoolRoute.querySelector('[data-route-prev]').addEventListener('click', () => { moveSchoolRoute(-1); startSchoolRoute(); });
+      schoolRoute.querySelector('[data-route-next]').addEventListener('click', () => { moveSchoolRoute(1); startSchoolRoute(); });
+      schoolRoute.addEventListener('pointerenter', stopSchoolRoute);
+      schoolRoute.addEventListener('pointerleave', startSchoolRoute);
+      schoolRoute.addEventListener('focusin', stopSchoolRoute);
+      schoolRoute.addEventListener('focusout', (event) => { if (!schoolRoute.contains(event.relatedTarget)) startSchoolRoute(); });
+      schoolRoute.addEventListener('pointerdown', (event) => { routePointerStart = event.clientX; });
+      schoolRoute.addEventListener('pointerup', (event) => {
+        if (routePointerStart === null) return;
+        const distance = event.clientX - routePointerStart;
+        routePointerStart = null;
+        if (Math.abs(distance) > 44) moveSchoolRoute(distance < 0 ? 1 : -1);
+      });
+      schoolRoute.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+          event.preventDefault();
+          moveSchoolRoute(event.key === 'ArrowRight' ? 1 : -1);
+        }
+      });
+      window.addEventListener('resize', renderSchoolRoute);
+      renderSchoolRoute();
+      startSchoolRoute();
+    }
+
+    schoolModal.querySelectorAll('[data-close-school]').forEach((button) => button.addEventListener('click', closeSchoolProfile));
+    schoolModal.querySelector('[data-gallery-prev]').addEventListener('click', () => renderSchoolImage(activeImageIndex - 1));
+    schoolModal.querySelector('[data-gallery-next]').addEventListener('click', () => renderSchoolImage(activeImageIndex + 1));
+    schoolModal.querySelector('[data-school-register]').addEventListener('click', () => {
+      const trigger = lastSchoolTrigger;
+      schoolModal.close();
+      openModal(trigger || document.querySelector('[data-open-registration]'));
+    });
+    schoolModal.addEventListener('click', (event) => { if (event.target === schoolModal) closeSchoolProfile(); });
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduceMotion && 'IntersectionObserver' in window) {
