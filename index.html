@@ -1759,6 +1759,12 @@
 <script>
   (() => {
     if (window.parent === window) return;
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[href^="#rec"]');
+      if (!link) return;
+      event.preventDefault();
+      window.parent.postMessage({ source: 'edustudio-landing', action: 'open-popup', popupId: link.getAttribute('href').slice(1) }, '*');
+    });
     let lastHeight = 0;
     const sendEmbedHeight = () => {
       requestAnimationFrame(() => {
